@@ -1,0 +1,16 @@
+projeto/
+│
+├── app/
+│   ├── __init__.py
+│   ├── fatsecret_client.py
+│   ├── routes.py
+│   ├── static/
+│   │   └── .keep   # (arquivo para manter a pasta no controle de versão)
+│   ├── templates/
+│   │   └── .keep   # (arquivo para manter a pasta no controle de versão)
+│
+├── .env            # Arquivo de variáveis de ambiente
+├── config.py       # Arquivo de configuração
+├── run.py          # Script principal para rodar o projeto
+├── requirements.txt # Arquivo de dependências do projeto
+└── meals.db        # Banco de dados SQLite

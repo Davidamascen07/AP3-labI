@@ -1,0 +1,11 @@
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Bem-vindo à API FatSecret</h2>
+<p>Use esta aplicação para pesquisar alimentos, visualizar detalhes e planejar refeições.</p>
+<a href="{{ url_for('app_routes.home') }}">Home</a>
+<a href="{{ url_for('app_routes.search_foods') }}">Buscar Alimentos</a>
+
+{% endblock %}

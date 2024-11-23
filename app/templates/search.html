@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Buscar Alimentos{% endblock %}
+
+{% block content %}
+<h2>Buscar Alimentos</h2>
+<form action="{{ url_for('app_routes.search_foods') }}" method="GET">
+    <label for="query">Digite o nome do alimento:</label>
+    <input type="text" id="query" name="query" required>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if foods %}
+    <h3>Resultados:</h3>
+    <ul>
+        {% for food in foods %}
+        <li>
+            <strong>{{ food['food_name'] }}</strong><br>
+            Marca: {{ food.get('brand_name', 'N/A') }}<br>
+            ID: {{ food['food_id'] }}
+        </li>
+        {% endfor %}
+    </ul>
+{% elif request.args.get('query') %}
+    <p>Nenhum resultado encontrado.</p>
+{% endif %}
+{% endblock %}
+

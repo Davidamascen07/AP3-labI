@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FatSecret API{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>FatSecret API</h1>
+        <nav>
+            <a href="{{ url_for('app_routes.home') }}">Home</a>
+            <a href="{{ url_for('app_routes.search_foods') }}">Buscar Alimentos</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 FatSecret Integration</p>
+    </footer>
+</body>
+</html>
+
